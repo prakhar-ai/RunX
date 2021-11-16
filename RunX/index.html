@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="library/base-min.css">
+	<link rel='stylesheet' href='library/dark-theme-min.css'>
+	<link rel="stylesheet" href="./style.css">
+	<!--<script type="module" src="https://cdn.jsdelivr.net/gh/vanillawc/wc-monaco-editor/index.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.min.css">
+   
+</head>
+
+<body>
+<div  id="navbar" class="navbar menu">
+            
+           
+  <a class="item">
+    
+  <div id="lang" class="ui teal dropdown labeled icon button large">
+    <i class="code icon"></i>
+    <span id="lang">Language</span>
+    <div class="menu">
+        <div class="ui icon search input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Search language...">
+        </div>
+        <div class="divider"></div>
+        <div class="header">
+        <i class="code icon"></i>
+        Select language
+        </div>
+        <div class="scrolling menu">
+        <div class="selected item" data-value="cpp">
+             <img src="c-plusplus.svg" style="padding:5px;">
+            <span class="text">C++</span>
+        </div>
+        <div class="item" data-value="c">
+             <img src="c.svg" style="padding:5px;">
+            <span class="text">C</span>
+        </div>
+        <div class="item" data-value="java">
+            <img src="java.svg" style="padding:5px;">
+            <span class="text">Java</span>
+        </div>
+        <div class="item" data-value="py">
+            <img src="python.svg" style="padding:5px;"><span class="text">Python</span>
+        </div>
+        </div>
+    </div>
+    </div>
+    </a>
+  <a class="item">
+    
+  <div id="theme" class="ui blue dropdown labeled icon button large" >
+    <i class="edit icon"></i>
+    <span id="theme">Theme</span>
+    <div class="menu">
+        <div class="ui icon search input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Search theme...">
+        </div>
+        <div class="divider"></div>
+        <div class="header">
+        <i class="edit icon"></i>
+        Select theme
+        </div>
+        <div class="scrolling menu">
+        <div class="selected item" data-value="default">
+            <div class="ui violet empty circular label" ></div>
+            Default
+        </div>
+        <div class="item" data-value="dark">
+            <div class="ui black empty circular label"></div>
+            Sublime
+        </div>
+        <div class="item" data-value="light">
+            <div class="ui grey empty circular label"></div>
+            Light
+        </div>
+        
+        </div>
+    </div>
+    </div>
+   
+    </a>
+    
+    <div class="item">
+    <button id="setbk" class="ui red button large">S</button>
+    </div>
+    <div class="item">
+    <button id="getbk" class="ui yellow button large">G</button>
+    </div>
+    <div class="item">
+     <button id="popupbtn" class="ui purple button large">Save</button>
+    </div>
+
+
+  <div class="center menu" style="margin-left:15%!important;">
+      <div class="item">
+        <div class="ui primary green button large" id="run"><i id="load" class="play icon"></i>Run (F9)</div>
+    </div>
+  </div>
+
+
+  <div style="visibility: hidden;">
+    <form id="formId" action="./index.html" method="POST">
+    <input type="text" name="fname" id="filename" hidden/>
+    <input type="text" name="lang" id="lang" hidden/>
+    <input type="text" name="src" id="src" hidden/>
+    <input type="text" name="date" id="date" hidden/>
+    </form>
+  </div>
+
+<div id="mymodal" class="ui tiny modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Enter filename to save
+  </div>
+<div class="ui form">
+<form id="formId1" method="POST">
+  <div class="field" style="margin:5%;">
+    <label>FileName</label>
+    <input type="text" name="fname" id="fname">
+  </div>
+   <input type="text" name="lang" id="lang" hidden/>
+    <input type="text" name="src" id="src" hidden/>
+    <input type="text" name="date" id="date" hidden/>
+</form>
+</div>
+  <div class="actions">
+    <div class="ui deny button">Cancel</div>
+    <button id="submitbtn" class="ui labeled icon primary button" type="submit"><i class="paper plane icon"></i>Submit</div>
+  </div>
+</div>
+
+  
+</div>
+	<div  id="goldenify-a">
+		<div id="editor1"></div>
+	</div>
+	<div id="goldenify-b">
+		<div id="editor2"></div>
+	</div>
+	<div id="goldenify-c">
+		<div id="editor3"></div>
+	</div>
+	<div id="goldenify-d">
+		<div id="editor4"></div>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/golden-layout/1.0.10/goldenlayout.min.js'>
+
+	</script>
+
+	<script src='https://unpkg.com/monaco-editor@0.10.1/min/vs/loader.js'></script>
+
+    
+  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.min.js">
+	</script>
+    
+	<script src="script2.js">
+
+	</script>
+	<script src="script.js">
+
+    </script>
+   <!--- <script src="script3.js"> </script> -->
+    
+
+	<!-- <wc-monaco-editor style="height:700px;width:700px" ></wc-monaco-editor> -->
+</body>
+
+</html>
